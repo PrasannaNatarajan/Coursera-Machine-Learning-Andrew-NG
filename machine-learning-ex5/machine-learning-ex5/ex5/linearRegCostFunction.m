@@ -25,7 +25,7 @@ J = sum(Jtemp) * (1/(2*m))+(lambda/(2*m))*(sum(theta.^2)-theta(1)^2);
 
 % grad(1) = (1/m)*sum((h-y).*X(:,1));
 % grad(2) = (1/m)*sum((h-y).*X(:,2)) + (lambda/m)*(sum(theta)-theta(1));
-grad = 1 / m .* ((theta' * X' - y') * X + lambda * [0;theta(2:end)]');
+grad = 1 / m .* ((h - y)' * X + lambda * [0;theta(2:end)]');
 
 
 
