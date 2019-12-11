@@ -20,10 +20,10 @@ for iter = 1:num_iters
     hmy = (h-y);
     val = zeros(1,size(X,2));
     for i = 1:size(X,2)
-        hmy(:,i:i) = (h-y) .* X(:,i:i);
+        hmy(:,i) = (h-y) .* X(:,i);
         %hmyx =(h-y) .* X(:,2);
     
-        val(:,i:i) = sum(hmy(:,i)) * (1/m);
+        val(:,i) = sum(hmy(:,i)) * (1/m);
         %val1 = sum(hmyx) * (1/m);
     end
     %temp1 = theta(1) - (alpha * val) ;
